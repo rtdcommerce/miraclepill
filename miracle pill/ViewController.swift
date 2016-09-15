@@ -10,7 +10,46 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var miraclePills: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var streetAddress: UILabel!
+    @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var cityField: UITextField!
+    @IBOutlet weak var state: UILabel!
+    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var countryField: UITextField!
+    @IBOutlet weak var zipCode: UILabel!
+    @IBOutlet weak var zipCodeField: UITextField!
+    @IBOutlet weak var stateField: UITextField!
     
+    
+    //Button pressed
+    @IBAction func buyBtnPressed(_ sender: AnyObject) {
+        
+        logo.isHidden = true
+        miraclePills.isHidden = true
+        price.isHidden = true
+        divider.isHidden = true
+        fullName.isHidden = true
+        nameField.isHidden = true
+        streetAddress.isHidden = true
+        addressField.isHidden = true
+        city.isHidden = true
+        cityField.isHidden = true
+        state.isHidden = true
+        country.isHidden = true
+        countryField.isHidden = true
+        zipCode.isHidden = true
+        zipCodeField.isHidden = true
+        stateField.isHidden = true
+        
+           }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
