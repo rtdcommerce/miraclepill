@@ -26,7 +26,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var zipCode: UILabel!
     @IBOutlet weak var zipCodeField: UITextField!
     @IBOutlet weak var stateField: UITextField!
+    @IBOutlet weak var buyBtnGone: UIButton!
+    @IBOutlet weak var success: UIImageView!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     //Button pressed
     @IBAction func buyBtnPressed(_ sender: AnyObject) {
@@ -47,18 +60,8 @@ class ViewController: UIViewController {
         zipCode.isHidden = true
         zipCodeField.isHidden = true
         stateField.isHidden = true
-        
-           }
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        buyBtnGone.isHidden = true
+        success.isHidden = false
     }
 
     

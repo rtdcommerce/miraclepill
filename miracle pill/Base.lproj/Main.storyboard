@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -111,6 +111,7 @@
                                     <action selector="buyBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hJJ-Av-2JE"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-OE-1B2"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -142,7 +143,9 @@
                             <constraint firstItem="QQh-w3-UQ2" firstAttribute="top" secondItem="j7O-Og-LP2" secondAttribute="bottom" constant="8" id="blZ-ef-WER"/>
                             <constraint firstItem="utF-sI-UfT" firstAttribute="top" secondItem="BvT-uq-k28" secondAttribute="bottom" constant="21" id="dSc-l1-ZfQ"/>
                             <constraint firstItem="fRI-Q7-zex" firstAttribute="trailing" secondItem="d2a-an-XYG" secondAttribute="trailing" id="djg-Ox-YdV"/>
+                            <constraint firstItem="lDh-OE-1B2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dt5-WU-smO"/>
                             <constraint firstItem="fMm-b2-IEK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e3G-nY-eTe"/>
+                            <constraint firstItem="lDh-OE-1B2" firstAttribute="top" secondItem="QQh-w3-UQ2" secondAttribute="bottom" constant="108" id="fLf-gB-wcv"/>
                             <constraint firstItem="E1P-IJ-CT6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fZL-5e-CtF"/>
                             <constraint firstItem="j7O-Og-LP2" firstAttribute="top" secondItem="lHO-hg-Cfh" secondAttribute="bottom" constant="18" id="gA2-fO-dK7"/>
                             <constraint firstItem="Gis-vw-jfo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gRg-Zd-ALR"/>
@@ -170,19 +173,21 @@
                     </view>
                     <connections>
                         <outlet property="addressField" destination="yZT-1F-3js" id="dHC-28-WfA"/>
+                        <outlet property="buyBtnGone" destination="tMM-bC-kRV" id="bWS-aA-Hqr"/>
                         <outlet property="city" destination="Gis-vw-jfo" id="MGp-nc-piF"/>
                         <outlet property="cityField" destination="jVw-W7-3h2" id="Orj-fa-xkO"/>
                         <outlet property="country" destination="O01-eH-Qg0" id="exk-tA-FIL"/>
                         <outlet property="countryField" destination="K9G-fH-8op" id="LLb-Gm-Q95"/>
                         <outlet property="divider" destination="j7O-Og-LP2" id="YZd-7L-t4y"/>
                         <outlet property="fullName" destination="QQh-w3-UQ2" id="Paq-zK-PUY"/>
-                        <outlet property="miraclePillmoji" destination="BvT-uq-k28" id="Cun-B2-krQ"/>
+                        <outlet property="logo" destination="BvT-uq-k28" id="TEO-Pg-EaY"/>
                         <outlet property="miraclePills" destination="utF-sI-UfT" id="ayx-Lr-Ntt"/>
                         <outlet property="nameField" destination="Ane-a5-Fei" id="0uy-uJ-hQ2"/>
                         <outlet property="price" destination="lHO-hg-Cfh" id="xHD-Uh-zKi"/>
                         <outlet property="state" destination="fMm-b2-IEK" id="aZD-zb-6eF"/>
                         <outlet property="stateField" destination="dVJ-5G-kP5" id="Kke-Ii-qGy"/>
                         <outlet property="streetAddress" destination="E1P-IJ-CT6" id="qqs-Dc-8mo"/>
+                        <outlet property="success" destination="lDh-OE-1B2" id="qd6-pA-hmo"/>
                         <outlet property="zipCode" destination="d2a-an-XYG" id="xAN-pb-G9E"/>
                         <outlet property="zipCodeField" destination="fRI-Q7-zex" id="Qsc-CB-zzR"/>
                     </connections>
@@ -195,5 +200,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
